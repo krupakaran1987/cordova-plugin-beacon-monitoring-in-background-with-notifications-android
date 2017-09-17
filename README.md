@@ -172,7 +172,7 @@ if you want to notify didexit and didrangebeaconsinregion then again goto Locati
 
 
 
-Thanks for the authors who created thos plugins becuase those plugins we are able to create this functionality.	
+Thanks for the authors who created those plugins becuase those plugins we are able to create this functionality.	
 
 
 
