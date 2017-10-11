@@ -3,17 +3,15 @@
 This repository is for getting notifications from background when the app is closed in ionic app(Android only).
 
 
-
-This is the plugin is combination of two plugings
+This is the plugin we have implemented using below two plugings
 
 https://github.com/lulibrary/Background-Beacon-Monitoring
-
 https://github.com/petermetz/cordova-plugin-ibeacon
 
-Thanks to the authors both the above plugins using this plugins we have developed this functionality.
+Thanks to above plugins authors using this plugins we have developed this functionality.
 
 
-Step1:
+##Step1:
 
 $ ionic cordova plugin add cordova-plugin-ibeacon
 $ npm install --save @ionic-native/ibeacon
@@ -22,7 +20,7 @@ Using above commands download the ibeacon plugin
 Add the below code for ibeacon usage in ionic app
 Create one provider and copy the all code shown below
 
-
+```
 import { IBeacon } from '@ionic-native/ibeacon';
 
 constructor(private ibeacon: IBeacon) { }
@@ -51,10 +49,11 @@ data => {
 console.log('didEnterRegion: ', data);
 }
 );
-
+```
 
 Replace the beacon uuid with your beacon uuid and identifier also
 
+```
 let beaconRegion = this.ibeacon.BeaconRegion('deskBeacon','F7826DA6-ASDF-ASDF-8024-BC5B71E0893E');
 //this below methods for didenterregion and didexit regions methods intialization
 
@@ -74,13 +73,13 @@ error => {
 resolve(false);
 }
 );
-
+```
 If you have any doubt regarding creation of provider we have added beacon-provided.ts file it's contains the all the methods shown above
 just copy the file beacon-provide.ts into your provides and call the method initialize using beaconprovider so it will start monitoring beacons
 before that make sure you have replaced beacon detailes with your beacons.
 
 
-step2:
+##step2:
 
 with in our repository we have developed one plugin using
 
@@ -93,7 +92,7 @@ Download this folder into your app folder
 
 using the below commands you can add this plugin to your app
 
-cordova plugin add "Background-Beacon-Monitoring"
+$cordova plugin add "Background-Beacon-Monitoring"
 
 After succesfully added you can see this plugin in plugins as
 
@@ -106,9 +105,10 @@ using the below code we can use this plugin in ionic app
 In you app folder with in app.components.ts file
 After all imports declare the variable defined as below
 
+```
 declare var BackgroundBeaconMonitoring:any;
 
-with in the contoller we are accesing the all methods here
+//with in the contoller we are accesing the all methods here
 
 BackgroundBeaconMonitoring.requestPermissions();
 
@@ -123,12 +123,12 @@ console.log("error");
 BackgroundBeaconMonitoring.startMonitoringRegion("deskbeacon","F7826DA6-ASDF-ASDF-8024-BC5B71E0893E",null,null);
 
 BackgroundBeaconMonitoring.startRangingRegion("deskbeacon","F7826DA6-ASDF-ASDF-8024-BC5B71E0893E",null,null);
-
+```
 After doing this this plugin is able to run all the beacons methods even when the app is closed
 
 
 
-step3:
+##step3:
 
 Now with in this repository you will see a folder called 
 com.unarin.cordova.beacon
@@ -174,7 +174,7 @@ if you want to notify didexit and didrangebeaconsinregion then again goto Locati
 
 
 
-Thanks for the authors who created those plugins becuase those plugins we are able to create this functionality.	
+Thanks for the authors who created those plugins becuase of those plugins we are able to create this functionality.	
 
 
 
