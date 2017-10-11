@@ -139,7 +139,7 @@ After doing this this plugin is able to run all the beacons methods even when th
 
 
 
-## Configuring and adding local notifications to Our project
+## Configuring and adding Local Notifications 
 
 
 Now with in this repository you will see a folder called 
