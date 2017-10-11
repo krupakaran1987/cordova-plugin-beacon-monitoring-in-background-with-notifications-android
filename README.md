@@ -5,8 +5,8 @@ This repository is for getting notifications from background when the app is clo
 
 This is the plugin we have implemented using below two plugings
 
-https://github.com/lulibrary/Background-Beacon-Monitoring
-https://github.com/petermetz/cordova-plugin-ibeacon
+1. https://github.com/lulibrary/Background-Beacon-Monitoring
+2. https://github.com/petermetz/cordova-plugin-ibeacon
 
 Thanks to above plugins authors using this plugins we have developed this functionality.
 
