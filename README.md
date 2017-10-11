@@ -11,7 +11,8 @@ https://github.com/petermetz/cordova-plugin-ibeacon
 Thanks to above plugins authors using this plugins we have developed this functionality.
 
 
-##Step1:
+Step1:
+______
 
 $ ionic cordova plugin add cordova-plugin-ibeacon
 $ npm install --save @ionic-native/ibeacon
@@ -78,8 +79,8 @@ If you have any doubt regarding creation of provider we have added beacon-provid
 just copy the file beacon-provide.ts into your provides and call the method initialize using beaconprovider so it will start monitoring beacons
 before that make sure you have replaced beacon detailes with your beacons.
 
-
-##step2:
+step2:
+_______
 
 with in our repository we have developed one plugin using
 
@@ -128,7 +129,8 @@ After doing this this plugin is able to run all the beacons methods even when th
 
 
 
-##step3:
+step3:
+______
 
 Now with in this repository you will see a folder called 
 com.unarin.cordova.beacon
