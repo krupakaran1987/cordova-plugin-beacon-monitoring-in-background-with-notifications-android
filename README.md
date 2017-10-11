@@ -12,7 +12,7 @@ Thanks to above plugins authors using this plugins we have developed this functi
 
 
 ## Adding Ibeacon Plugin:
-______
+
 
 $ ionic cordova plugin add cordova-plugin-ibeacon
 $ npm install --save @ionic-native/ibeacon
@@ -82,7 +82,7 @@ just copy the file beacon-provide.ts into your provides and call the method init
 before that make sure you have replaced beacon detailes with your beacons.
 
 ## Adding background monitoring plugin to monitor beacons when the app is closed:
-_______
+
 
 with in our repository we have developed one plugin using
 
@@ -132,7 +132,7 @@ After doing this this plugin is able to run all the beacons methods even when th
 
 
 ## Configuring and adding local notifications to Our project
-______
+
 
 Now with in this repository you will see a folder called 
 com.unarin.cordova.beacon
