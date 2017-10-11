@@ -11,7 +11,7 @@ https://github.com/petermetz/cordova-plugin-ibeacon
 Thanks to above plugins authors using this plugins we have developed this functionality.
 
 
-Step1:
+## Adding Ibeacon Plugin:
 ______
 
 $ ionic cordova plugin add cordova-plugin-ibeacon
@@ -28,26 +28,27 @@ constructor(private ibeacon: IBeacon) { }
 
 // Request permission to use location on iOS
 this.ibeacon.requestAlwaysAuthorization();
+
 // create a new delegate and register it with the native layer
 let delegate = this.ibeacon.Delegate();
 
 // Subscribe to some of the delegate's event handlers
 delegate.didRangeBeaconsInRegion()
 .subscribe(
-data => console.log('didRangeBeaconsInRegion: ', data),
-error => console.error();
+	data => console.log('didRangeBeaconsInRegion: ', data),
+	error => console.error();
 );
 
 delegate.didStartMonitoringForRegion()
 .subscribe(
-data => console.log('didStartMonitoringForRegion: ', data),
-error => console.error();
+	data => console.log('didStartMonitoringForRegion: ', data),
+	error => console.error();
 );
 
 delegate.didEnterRegion()
 .subscribe(
-data => {
-console.log('didEnterRegion: ', data);
+	data => {
+	console.log('didEnterRegion: ', data);
 }
 );
 ```
@@ -59,19 +60,20 @@ let beaconRegion = this.ibeacon.BeaconRegion('deskBeacon','F7826DA6-ASDF-ASDF-80
 //this below methods for didenterregion and didexit regions methods intialization
 
 this.ibeacon.startMonitoringForRegion(beaconRegion)
-.then(
-() => console.log('Native layer recieved the request to monitoring'),
-error => console.error('Native layer failed to begin monitoring: ', error)
+.then(() =>
+	console.log('Native layer recieved the request to monitoring'),
+error =>
+	console.error('Native layer failed to begin monitoring: ', error)
 );
 
 //this below methods for initialize didrangebeaconsinregion method
 this.IBeacon.startRangingBeaconsInRegion(this.region)
-.then(
-() => {
-resolve(true);
+.then(() =>
+{
+	resolve(true);
 },
 error => {
-resolve(false);
+	resolve(false);
 }
 );
 ```
@@ -79,7 +81,7 @@ If you have any doubt regarding creation of provider we have added beacon-provid
 just copy the file beacon-provide.ts into your provides and call the method initialize using beaconprovider so it will start monitoring beacons
 before that make sure you have replaced beacon detailes with your beacons.
 
-step2:
+## Adding background monitoring plugin to monitor beacons when the app is closed:
 _______
 
 with in our repository we have developed one plugin using
@@ -129,7 +131,7 @@ After doing this this plugin is able to run all the beacons methods even when th
 
 
 
-step3:
+## Configuring and adding local notifications to Our project
 ______
 
 Now with in this repository you will see a folder called 
